@@ -10,6 +10,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet" />
   </head>
   <body>
+    <nav>
+      <div class="panel">
+        <div class="library-panel">
+          <button class="library"><i class="fas fa-book-open"></i></button>
+          <p>Library</p>
+        </div>
+        <div class="generate-panel">
+          <button class="generate"><i class="fas fa-sync"></i></button>
+          <p>Generate</p>
+        </div>
+        <div class="save-panel">
+          <button class="generate"><i class="fas fa-save"></i></button>
+          <p>Save</p>
+        </div>
+      </div>
+      <div class="login">Login</div>
+    </nav>
     <div class="colors">
       <div class="color">
         <h2>Hex</h2>
@@ -18,7 +35,9 @@
           <button class="lock"><i class="fas fa-lock-open"></i></button>
         </div>
         <div class="sliders">
-          <button class="close-adjustment">X</button>
+          <button class="close-adjustment">
+            <div class="close-text"><i class="fas fa-arrow-down"></i></div>
+          </button>
           <span>Hue</span>
           <input type="range" min="0" max="360" step="1" name="hue" class="hue-input" data-hue="0" />
           <span>Brightness</span>
@@ -34,7 +53,9 @@
           <button class="lock"><i class="fas fa-lock-open"></i></button>
         </div>
         <div class="sliders">
-          <button class="close-adjustment">X</button>
+          <button class="close-adjustment">
+            <div class="close-text"><i class="fas fa-arrow-down"></i></div>
+          </button>
           <span>Hue</span>
           <input type="range" min="0" max="360" step="1" name="hue" class="hue-input" data-hue="1" />
           <span>Brightness</span>
@@ -50,7 +71,9 @@
           <button class="lock"><i class="fas fa-lock-open"></i></button>
         </div>
         <div class="sliders">
-          <button class="close-adjustment">X</button>
+          <button class="close-adjustment">
+            <div class="close-text"><i class="fas fa-arrow-down"></i></div>
+          </button>
           <span>Hue</span>
           <input type="range" min="0" max="360" step="1" name="hue" class="hue-input" data-hue="2" />
           <span>Brightness</span>
@@ -66,7 +89,9 @@
           <button class="lock"><i class="fas fa-lock-open"></i></button>
         </div>
         <div class="sliders">
-          <button class="close-adjustment">X</button>
+          <button class="close-adjustment">
+            <div class="close-text"><i class="fas fa-arrow-down"></i></div>
+          </button>
           <span>Hue</span>
           <input type="range" min="0" max="360" step="1" name="hue" class="hue-input" data-hue="3" />
           <span>Brightness</span>
@@ -82,7 +107,9 @@
           <button class="lock"><i class="fas fa-lock-open"></i></button>
         </div>
         <div class="sliders">
-          <button class="close-adjustment">X</button>
+          <button class="close-adjustment">
+            <div class="close-text"><i class="fas fa-arrow-down"></i></div>
+          </button>
           <span>Hue</span>
           <input type="range" min="0" max="360" step="1" name="hue" class="hue-input" data-hue="4" />
           <span>Brightness</span>
@@ -92,20 +119,7 @@
         </div>
       </div>
     </div>
-    <div class="panel">
-      <div class="library-panel">
-        <button class="library"><i class="fas fa-book-open"></i></button>
-        <p>Library</p>
-      </div>
-      <div class="generate-panel">
-        <button class="generate"><i class="fas fa-sync"></i></button>
-        <p>Generate</p>
-      </div>
-      <div class="save-panel">
-        <button class="generate"><i class="fas fa-save"></i></button>
-        <p>Save</p>
-      </div>
-    </div>
+
     <div class="copy-container">
       <div class="copy-popup">
         <h3>Copied to clipboard!</h3>

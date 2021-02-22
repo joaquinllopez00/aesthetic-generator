@@ -19,6 +19,20 @@ svg {
   pointer-events: none;
 }
 
+nav {
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgb(31, 33, 63);
+}
+
+nav .login {
+  position: relative;
+  right: 3vw;
+  color: white;
+}
+
 .colors {
   min-height: 80vh;
   display: flex;
@@ -48,12 +62,14 @@ svg {
   bottom: 0%;
   padding: 1rem;
   background: white;
+  border: none;
   border-top-right-radius: 1rem;
   border-top-left-radius: 1rem;
   pointer-events: none;
   opacity: 0;
   transform: translateY(100px);
   transition: all 0.5s ease-in-out;
+  overflow: hidden;
 }
 
 .sliders.active {
@@ -66,6 +82,8 @@ svg {
   position: absolute;
   top: 0;
   right: 0;
+  height: 2rem;
+  width: 2.5rem;
   padding: 0.5rem;
   pointer-events: all;
   border-bottom-left-radius: 1rem;
@@ -75,8 +93,12 @@ svg {
   color: white;
   cursor: pointer;
   font-weight: bold;
+  transform: rotate(-45deg);
 }
 
+.close-text {
+  transform: rotate(45deg);
+}
 .controls {
   display: flex;
   flex-direction: column;
@@ -87,6 +109,9 @@ svg {
   justify-content: space-evenly;
   align-items: center;
   height: 20vh;
+  width: 100%;
+  position: relative;
+  top: 15%;
 }
 
 .panel button {
