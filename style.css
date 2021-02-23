@@ -17,6 +17,11 @@ path,
 i,
 svg {
   pointer-events: none;
+  outline: none;
+}
+
+button {
+  outline: none;
 }
 
 nav {
@@ -78,7 +83,9 @@ nav .login {
   pointer-events: all;
 }
 
-.sliders button {
+.sliders button,
+.close-save,
+.close-library {
   position: absolute;
   top: 0;
   right: 0;
@@ -94,6 +101,7 @@ nav .login {
   cursor: pointer;
   font-weight: bold;
   transform: rotate(-45deg);
+  outline: none;
 }
 
 .close-text {
@@ -123,10 +131,12 @@ nav .login {
   color: white;
   cursor: pointer;
   border-radius: 1rem;
+  outline: none;
 }
 .library-panel,
 .generate-panel,
-.save-panel {
+.save-panel,
+.login-panel {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -160,7 +170,11 @@ input[type="range"]::-webkit-slider-thumb {
   border-radius: 50%;
 }
 
-.copy-container {
+.copy-container,
+.save-container,
+.library-container,
+.login-container,
+.about-container {
   position: fixed;
   top: 0%;
   left: 0%;
@@ -175,7 +189,11 @@ input[type="range"]::-webkit-slider-thumb {
   transition: all 0.5s ease-in-out;
 }
 
-.copy-popup {
+.copy-popup,
+.save-popup,
+.library-popup,
+.login-popup,
+.about-popup {
   background: white;
   display: flex;
   flex-direction: column;
@@ -186,22 +204,167 @@ input[type="range"]::-webkit-slider-thumb {
   transform: translateY(-2rem);
   min-width: 30%;
   min-height: 30vh;
+  overflow: hidden;
 }
 
-.copy-popup {
+.copy-popup h4,
+.save-popup h4,
+.library-popup h4,
+.login-popup h4,
+.about-popup h4 {
   font-size: 2rem;
   padding: 2rem;
 }
 
-.copy-container.active {
+.copy-container.active,
+.save-container.active,
+.library-container.active,
+.login-container.active,
+.about-container.active {
   opacity: 1;
   pointer-events: all;
 }
 
-.copy-popup.active {
+.copy-popup.active .copy-container.active,
+.save-container.active,
+.library-container.active,
+.login-container.active,
+.about-container.active {
   transform: transalteY(0rem);
 }
 
 .copy-popup p {
   font-size: 0.5rem;
+}
+
+.save-name {
+  font-size: 1rem;
+  padding: 1.5rem;
+}
+
+.close-save,
+.close-library {
+  transform: rotate(0deg);
+}
+
+.submit-save {
+  margin: 2rem;
+  padding: 1rem 3rem;
+  background: rgb(60, 60, 92);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+.library-popup {
+  min-width: 40%;
+  padding: 1rem;
+  justify-content: flex-start;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  max-height: 50vh;
+}
+
+.library-popup::-webkit-scrollbar {
+  display: none;
+}
+
+.custom-palette {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  padding: 2rem;
+}
+
+.small-preview {
+  display: flex;
+  flex: 1;
+}
+.custom-palette h4 {
+  flex: 1;
+}
+
+.small-preview {
+  height: 5rem;
+  flex: 1;
+}
+
+.small-preview div {
+  width: 100%;
+}
+
+.pick-palette-btn {
+  height: 5rem;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: black;
+}
+
+.login-panel {
+  display: flex;
+  width: 7rem;
+  align-items: center;
+  justify-content: center;
+  height: 2rem;
+  position: relative;
+  right: 1rem;
+  bottom: 0.1rem;
+}
+
+.login {
+  border: none;
+  background-color: rgb(31, 33, 63);
+  font-size: 1rem;
+}
+
+.login-popup {
+  height: 20rem;
+}
+
+.login-container h4 {
+  padding: 1rem 1rem;
+}
+
+.save-credentials {
+  position: relative;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1.5rem;
+  background: rgb(60, 60, 92);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+.extra-info {
+  background: rgb(31, 33, 63);
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.extra-info ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style-type: none;
+  justify-content: space-evenly;
+}
+
+.extra-info button {
+  background-color: rgb(31, 33, 63);
+  border: none;
+  cursor: pointer;
+  color: white;
+  height: auto;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.extra-info .about button {
+  padding-bottom: 1rem;
 }
