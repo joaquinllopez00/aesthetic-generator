@@ -25,16 +25,13 @@ button {
 }
 
 nav {
-  height: 10vh;
+  height: 8vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgb(31, 33, 63);
+  background: #010101;
 }
-
 nav .login {
-  position: relative;
-  right: 3vw;
   color: white;
 }
 
@@ -126,11 +123,13 @@ nav .login {
   font-size: 1.2rem;
   margin: 1rem;
   padding: 1rem 2rem;
-  background: rgb(31, 33, 63);
+  background: black;
   border: none;
   color: white;
   cursor: pointer;
   border-radius: 1rem;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
   outline: none;
 }
 .library-panel,
@@ -311,14 +310,13 @@ input[type="range"]::-webkit-slider-thumb {
   justify-content: center;
   height: 2rem;
   position: relative;
-  right: 1rem;
-  bottom: 0.1rem;
 }
 
 .login {
   border: none;
   background-color: rgb(31, 33, 63);
-  font-size: 1rem;
+  font-size: 1.2rem;
+  cursor: pointer;
 }
 
 .login-popup {
@@ -341,8 +339,8 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 .extra-info {
-  background: rgb(31, 33, 63);
-  height: 10vh;
+  background: black;
+  height: 12vh;
   display: flex;
   justify-content: center;
   align-items: center;
